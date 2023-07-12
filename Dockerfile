@@ -1,4 +1,4 @@
-FROM scratch as collate-source
+FROM --platform=linux/amd64 scratch as collate-source
 
 WORKDIR /workspace
 
@@ -8,7 +8,7 @@ COPY internal/ /workspace/internal/
 COPY mockghauth/ /workspace/mockghauth/
 
 # Build the manager binary
-FROM golang:1.20 as builder
+FROM --platform=$BUILDPLATFORM golang:1.20 as builder
 ARG TARGETOS
 ARG TARGETARCH
 
@@ -31,7 +31,7 @@ RUN CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH} go build -a -o se
 
 # Use distroless as minimal base image to package the manager binary
 # Refer to https://github.com/GoogleContainerTools/distroless for more details
-FROM gcr.io/distroless/static:nonroot
+FROM --platform=$BUILDPLATFORM gcr.io/distroless/static:nonroot
 WORKDIR /
 COPY --from=builder /workspace/server .
 USER 65532:65532
