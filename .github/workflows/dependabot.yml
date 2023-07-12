@@ -1,0 +1,9 @@
+name: Dependabot
+
+on:
+  pull_request:
+
+jobs:
+  dependabot:
+    name: "auto-merge"
+    uses: dosquad/actions/.github/workflows/dependabot-automerge.yml@main
