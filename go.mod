@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/na4ma4/config v1.0.1
 	github.com/spf13/cobra v1.8.0
-	github.com/spf13/viper v1.18.2
+	github.com/spf13/viper v1.19.0
 )
 
 require (
