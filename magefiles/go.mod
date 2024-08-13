@@ -2,8 +2,6 @@ module github.com/dosquad/mock-oauth-test-server/magefiles
 
 go 1.22.2
 
-toolchain go1.22.2
-
 require (
 	github.com/dosquad/mage v0.1.25
 	github.com/magefile/mage v1.15.0
