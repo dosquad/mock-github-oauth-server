@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"log"
 	"net/url"
 	"time"
@@ -15,13 +14,11 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
-//nolint:gochecknoglobals // cobra uses globals in main
 var rootCmd = &cobra.Command{
 	Use:  "mock-oauth-server",
 	RunE: mainCommand,
 }
 
-//nolint:gochecknoinits // init is used in main for cobra
 func init() {
 	cobra.OnInitialize(mainconfig.ConfigInit)
 
@@ -49,7 +46,7 @@ func mainCommand(_ *cobra.Command, _ []string) error {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	baseURL, baseURLErr := url.Parse(fmt.Sprintf("http://%s", cfg.GetString("server.bind")))
+	baseURL, baseURLErr := url.Parse("http://" + cfg.GetString("server.bind"))
 	if baseURLErr != nil {
 		return baseURLErr
 	}

@@ -110,7 +110,7 @@ func (s *Server) loginOauthAccessToken(c *gin.Context) {
 	c.JSON(http.StatusOK, resp)
 }
 
-//nolint:gomnd // get everything after first space in Authorization header.
+//nolint:mnd // get everything after first space in Authorization header.
 func (s *Server) checkAuthIsValid(c *gin.Context) bool {
 	if authHeader := c.Request.Header.Get("Authorization"); authHeader != "" {
 		spHeader := strings.SplitN(authHeader, " ", 2)

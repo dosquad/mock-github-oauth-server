@@ -63,7 +63,7 @@ func (t *Tokens) New() string {
 
 	id := ulid.Make()
 
-	token := fmt.Sprintf("ght_%s", strings.ToLower(id.String()))
+	token := "ght_" + strings.ToLower(id.String())
 
 	t.checkMap()
 	t.tokens[token] = time.Now().Add(t.expire)
