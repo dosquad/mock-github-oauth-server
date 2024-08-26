@@ -3,7 +3,7 @@ module github.com/dosquad/mock-oauth-test-server
 go 1.22.2
 
 require (
-	github.com/dosquad/go-cliversion v0.1.4
+	github.com/dosquad/go-cliversion v0.1.6
 	github.com/na4ma4/config v1.0.2
 	github.com/spf13/cobra v1.8.1
 	github.com/spf13/viper v1.19.0
