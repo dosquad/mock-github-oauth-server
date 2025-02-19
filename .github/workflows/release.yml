@@ -1,7 +1,6 @@
 name: "Docker Release"
 
 on:
-  pull_request:
   push:
     tags:
       - '*'
@@ -9,7 +8,6 @@ on:
 jobs:
   docker-release:
     name: "Docker Release"
-    if: startsWith(github.ref, 'refs/tags/')
     uses: dosquad/actions/.github/workflows/docker-release.yml@main
     secrets:
       docker_github_token: ${{ secrets.GITHUB_TOKEN }}

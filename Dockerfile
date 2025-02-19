@@ -10,7 +10,7 @@ COPY internal/ /workspace/internal/
 COPY mockghauth/ /workspace/mockghauth/
 
 # Build the manager binary
-FROM --platform=$BUILDPLATFORM golang:1.22 AS builder
+FROM --platform=$BUILDPLATFORM golang:1.24 AS builder
 ARG TARGETOS
 ARG TARGETARCH
 
