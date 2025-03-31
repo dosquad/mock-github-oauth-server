@@ -1,12 +1,11 @@
 module github.com/dosquad/mock-oauth-test-server
 
 go 1.24.0
-
 require (
 	github.com/dosquad/go-cliversion v0.2.1
 	github.com/na4ma4/config v1.0.2
 	github.com/spf13/cobra v1.9.1
-	github.com/spf13/viper v1.20.0
+	github.com/spf13/viper v1.20.1
 )
 
 require github.com/go-viper/mapstructure/v2 v2.2.1 // indirect
