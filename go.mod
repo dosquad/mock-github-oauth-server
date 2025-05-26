@@ -4,12 +4,15 @@ go 1.24.0
 
 require (
 	github.com/dosquad/go-cliversion v0.2.1
-	github.com/na4ma4/config v1.0.3
+	github.com/na4ma4/config v1.0.4
 	github.com/spf13/cobra v1.9.1
 	github.com/spf13/viper v1.20.1
 )
 
-require github.com/go-viper/mapstructure/v2 v2.2.1 // indirect
+require (
+	github.com/go-viper/mapstructure/v2 v2.2.1 // indirect
+	github.com/na4ma4/go-permbits v0.5.3 // indirect
+)
 
 require (
 	github.com/bytedance/sonic v1.13.2 // indirect

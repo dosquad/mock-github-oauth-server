@@ -58,8 +58,10 @@ github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd h1:TRLaZ9cD/w
 github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
 github.com/modern-go/reflect2 v1.0.2 h1:xBagoLtFs94CBntxluKeaWgTMpvLxC4ur3nMaC9Gz0M=
 github.com/modern-go/reflect2 v1.0.2/go.mod h1:yWuevngMOJpCy52FWWMvUC8ws7m/LJsjYzDa0/r8luk=
-github.com/na4ma4/config v1.0.3 h1:urL8tDVK2nOffQ4CeemRmSCUdzr+WgQ2Q1RhVGX6BYU=
-github.com/na4ma4/config v1.0.3/go.mod h1:tuIufOEBLzp7n4Swb8CWXOSL9LjcRvAum4NMmnJ5IXE=
+github.com/na4ma4/config v1.0.4 h1:Gf+jvlmdWwVZCdz6nefzcHc/z+WUEpKKLC6zZoWcog8=
+github.com/na4ma4/config v1.0.4/go.mod h1:plYTnhwgd268sQ+jHNr/A9AmgIUeu7nu/LhJkOgEY1U=
+github.com/na4ma4/go-permbits v0.5.3 h1:G0FnRBzqMbVVC8HvFVpvoE/ApoxFvuF/G+/NUo2m4AA=
+github.com/na4ma4/go-permbits v0.5.3/go.mod h1:hTZ7mFUNSW40AazP1B02K74sSJP9Moaei2LVSyJHFAQ=
 github.com/oklog/ulid/v2 v2.1.1 h1:suPZ4ARWLOJLegGFiZZ1dFAkqzhMjL3J1TzI+5wHz8s=
 github.com/oklog/ulid/v2 v2.1.1/go.mod h1:rcEKHmBBKfef9DhnvX7y1HZBYxjXb0cP5ExxNsTT1QQ=
 github.com/pborman/getopt v0.0.0-20170112200414-7148bc3a4c30/go.mod h1:85jBQOZwpVEaDAr341tbn15RS4fCAsIst0qp7i8ex1o=
