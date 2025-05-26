@@ -3,7 +3,6 @@ package mockghauth
 import (
 	"context"
 	"fmt"
-	"log"
 	"net/http"
 	"net/url"
 	"os"
@@ -26,6 +25,7 @@ type Server struct {
 	g       *gin.Engine
 }
 
+//nolint:forbidigo // panic error.
 func NewServer(baseURL *url.URL, cfg config.Conf) *Server {
 	g := gin.Default() // listen on 0.0.0.0:8080
 	codes := &Codes{}
@@ -42,19 +42,22 @@ func NewServer(baseURL *url.URL, cfg config.Conf) *Server {
 
 	if filename := cfg.GetString("load.code-file"); filename != "" {
 		if err := codes.ReadFile(filename); err != nil {
-			log.Panicf("unable to load file: %s", err)
+			fmt.Printf("unable to load file[%s]: %s\n", filename, err)
+			panic(err)
 		}
 	}
 
 	if filename := cfg.GetString("load.clients-file"); filename != "" {
 		if err := clients.ReadFile(filename); err != nil {
-			log.Panicf("unable to load file: %s", err)
+			fmt.Printf("unable to load file[%s]: %s\n", filename, err)
+			panic(err)
 		}
 	}
 
 	if filename := cfg.GetString("load.tokens-file"); filename != "" {
 		if err := tokens.ReadFile(filename); err != nil {
-			log.Panicf("unable to load file: %s", err)
+			fmt.Printf("unable to load file[%s]: %s\n", filename, err)
+			panic(err)
 		}
 	}
 
