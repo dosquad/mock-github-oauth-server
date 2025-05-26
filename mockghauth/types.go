@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/url"
 	"time"
 
@@ -65,19 +64,23 @@ type GitHubAPIUser struct {
 	Plan                    GitHubAPIUserPlan `json:"plan"`
 }
 
+//nolint:forbidigo // panic error.
 func urlMustResolve(baseURL *url.URL, relativePath string) *url.URL {
 	relURL, err := url.Parse(relativePath)
 	if err != nil {
-		log.Panicf("unable to parse URL: %s", err)
+		fmt.Printf("unable to parse URL[%s]: %s\n", relativePath, err)
+		panic(err)
 	}
 
 	return baseURL.ResolveReference(relURL)
 }
 
+//nolint:forbidigo // panic error.
 func timeMustParseDef(value string) time.Time {
 	ts, err := time.Parse(time.RFC3339, value)
 	if err != nil {
-		log.Panicf("unable to parse time(%s): %s", value, err)
+		fmt.Printf("unable to parse time(%s): %s\n", value, err)
+		panic(err)
 	}
 
 	return ts
