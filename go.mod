@@ -10,7 +10,7 @@ require (
 )
 
 require (
-	github.com/go-viper/mapstructure/v2 v2.2.1 // indirect
+	github.com/go-viper/mapstructure/v2 v2.3.0 // indirect
 	github.com/na4ma4/go-permbits v0.5.3 // indirect
 )
 
